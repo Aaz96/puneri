@@ -1,0 +1,75 @@
+{% extends 'layout_about.html' %}
+{% block content %}
+<style>
+      *{
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        /* Float four columns side by side */
+        .column {
+          float: left;
+          width: 30%;
+          padding: 0 10px;
+        }
+        
+        /* Remove extra left and right margins, due to padding */
+        .row {margin: 0 -5px;}
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Responsive columns */
+        @media screen and (max-width: 600px) {
+          .column {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+          }
+        }
+        
+        /* Style the counter cards */
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          padding: 16px;
+          text-align: center;
+          background-color: #f1f1f1;
+        }
+        </style>
+        
+        
+        <div class="row">
+          <div class="column">
+            <div class="card">
+                <img src="https://media.licdn.com/dms/image/C5103AQHUvx6OlBbh6w/profile-displayphoto-shrink_200_200/0?e=1580342400&v=beta&t=si53sTUY6uhCP6lx4SvU85TAmjnXncYtII_LbEzy6R8" class="card-img-top" alt="...">
+              <h3 style="padding: 10px 0 0 0;">Ali Asgar Zakir</h3>
+              <p>Machine Learning Engineer</p>
+              <a href="https://www.linkedin.com/in/ali-asgar-zakir-5b6950113"  target="_blank" class="card-link"> <i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card">
+              <img src="https://media.licdn.com/dms/image/C4D03AQGvyvidWv99_A/profile-displayphoto-shrink_200_200/0?e=1580342400&v=beta&t=dWxbgcZLJX_COO66VDK93gFyGHXrCs4sllfFNloGC68"  class="card-img-top" alt="...">  
+              <h3 style="padding: 10px 0 0 0;">Harshal Marathe</h3>
+              <p>Machine Learning Engineer</p>
+              <a href="https://www.linkedin.com/in/harshal-marathe-300501131" target="_blank" class="card-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+          </div>
+          
+          <div class="column">
+            <div class="card">
+                <img src="https://media.licdn.com/dms/image/C5603AQElSkzkFIMwQA/profile-displayphoto-shrink_200_200/0?e=1580342400&v=beta&t=GEM1QMRFs5ik13MCj0va_8ZVk0Ar9d09ig40nTQOSyo" class="card-img-top" alt="...">
+              <h3 style="padding: 10px 0 0 0;">Rushal Barkhade</h3>
+              <p>Data Scientist Engineer</p>
+              <a href="https://www.linkedin.com/in/rushal-barkhade-0201bb127"  target="_blank" class="card-link"> <i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+          </div>
+{% endblock content %}

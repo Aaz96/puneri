@@ -1,0 +1,36 @@
+{% extends 'layout_home.html' %}
+{% block content %}
+<div class="bk_iage" style=" position: relative;
+text-align: center;
+color: white;">
+<img src="../static/images/canyon.jpg" alt="" width="100%" style="filter: blur(2px);
+-webkit-filter: blur(2px);
+" >
+
+<div class="text_ig" style="position: absolute;
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);">
+    <form method="POST" action="/query">
+   
+    <div style="font-family:'Pacifico', cursive; font-size: 3em;"> Places to visit in Pune</div>
+    <div style="padding: 5px;">
+
+    </div>
+    <input name="u" style="border-radius: 8px;"><br><br>
+    <input type="submit" style="  background-color:transparent; /* Green */
+    border-radius: 8px;
+    border: 2px solid green;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    font-family: 'Cinzel', serif;
+    margin: 4px 2px;
+    cursor: pointer;">
+    </form>
+</div>
+</div>
+{% endblock content %}

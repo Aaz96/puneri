@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {% for post in places.keys() %}
+        {% for key in places[post] %}
+       <div style="padding: 30px 0 9px 0;">
+        <article class="article-metadata">
+            <div class="container">
+                <div class="article-metadata">
+                    <h5 class="d-none d-lg-block d-print-block" style="color:white;font-size: 32px; text-transform: capitalize; font-family:'Cinzel', serif; ;">{{places[post][key][0]}}</h5>
+                    <small class="badge badge-pill badge-secondary" style="color: yellow; text-align: center;">{{places[post][key][2]}}/5</small>
+                    <small class="badge badge-pill badge-secondary" style="text-align: center; font-size: 13px;">{{places[post][key][1][0]|upper}}{{places[post][key][1][1:]}}</small>
+                </div>
+                <div class="article-metadata">
+                    <p style="color: black ; font-size:21px; text-align: justify;" >{{places[post][key][3]}}</p>
+                </div>
+                <!-- <div>
+                    {% for i in range(5)%}
+                        <small></small>
+                    {% endfor %}
+                </div> -->
+                
+            </div>
+        </article>
+    </div>
+        {% endfor %}
+    {% endfor %}
+    
+ 
+{% endblock content %}
