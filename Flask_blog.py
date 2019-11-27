@@ -2,9 +2,9 @@ from flask import Flask, render_template, url_for, request
 import pandas as pd
 import string
 import numpy as np
-from nltk.stem import WordNetLemmatizer
+# from nltk.stem import WordNetLemmatizer
 from collections import defaultdict
-lemmatizer= WordNetLemmatizer()
+# lemmatizer= WordNetLemmatizer()
 import re
 
 app = Flask(__name__)
@@ -17,9 +17,9 @@ dict1 = defaultdict(lambda :defaultdict(list))
 def places(input):
     # flag = True
     word = str(input).lower()
-    lem_word= lemmatizer.lemmatize(word)
+#     lem_word= lemmatizer.lemmatize(word)
     for i in range(len(final_1['places'])):  
-        if lem_word in final_1['tags'][i]:
+        if word in final_1['tags'][i]:
             # flag = True
             dict1["places"][i].append(final_1[final_1['tags']==final_1['tags'][i]]['places'][i])
             dict1["places"][i].append(str(final_1[final_1['tags']==final_1['tags'][i]]['tags'][i]))
@@ -27,9 +27,9 @@ def places(input):
             dict1["places"][i].append(final_1[final_1['tags']==final_1['tags'][i]]['review'][i])  
 
 
-        elif lem_word in final_1['places'][i]:
+        elif word in final_1['places'][i]:
             # flag = False
-            df1 = final_1[final_1['places'].str.contains(lem_word)]
+            df1 = final_1[final_1['places'].str.contains(word)]
             df1 = df1.reset_index(drop =True)
             for i in range(len(df1)):
                 dict1["places"][i].append(df1['places'][i])
